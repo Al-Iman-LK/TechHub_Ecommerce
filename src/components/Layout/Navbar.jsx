@@ -108,6 +108,14 @@ const Navbar = () => {
                 {/* Dropdown Menu */}
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   <div className="py-1">
+                    {user?.role === 'admin' && (
+                      <Link
+                        to="/admin"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        Admin Dashboard
+                      </Link>
+                    )}
                     <Link
                       to="/profile"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -208,6 +216,15 @@ const Navbar = () => {
                   <div className="px-3 py-2 text-sm text-gray-500">
                     Signed in as {user?.name}
                   </div>
+                  {user?.role === 'admin' && (
+                    <Link
+                      to="/admin"
+                      className="block text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Admin Dashboard
+                    </Link>
+                  )}
                   <Link
                     to="/profile"
                     className="block text-gray-600 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium"

@@ -28,6 +28,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminProducts from './pages/admin/AdminProducts';
+
 // Protected Route Component
 import ProtectedRoute from './components/Auth/ProtectedRoute';
 
@@ -85,6 +89,10 @@ function App() {
                       <OrderConfirmation />
                     </ProtectedRoute>
                   } />
+                  
+                  {/* Admin Routes */}
+                  <Route path="/admin" element={<AdminDashboard />} />
+                  <Route path="/admin/products" element={<AdminProducts />} />
                   
                   {/* 404 Route */}
                   <Route path="*" element={<NotFound />} />
