@@ -14,11 +14,19 @@ A sophisticated full-stack e-commerce platform for technology and electronics re
 - **Product Reviews**: Read and write reviews with ratings
 - **Mobile Responsive**: Optimized for all device sizes
 
-### Admin Features
-- **Inventory Management**: Add, edit, and manage product listings
-- **Order Processing**: View and update order statuses
-- **User Management**: Manage customer accounts
-- **Analytics Dashboard**: Sales and performance metrics
+### Admin Features ✅
+- **Admin Dashboard**: Complete analytics with statistics, recent orders, and low stock alerts
+- **Inventory Management**: Add, edit, delete, and manage product listings with stock tracking
+- **Order Processing**: View all orders, update order statuses, and manage fulfillment
+- **User Management**: View and manage customer accounts and roles
+- **Analytics Dashboard**: Sales metrics, revenue tracking, and performance insights
+- **Role-based Access**: Secure admin-only routes and functionality
+
+**Admin Access:**
+- Login URL: Use the regular login form at `/login`
+- Email: `admin@techhub.com`
+- Password: `admin123`
+- Dashboard: `/admin` (accessible after admin login)
 
 ## 🛠️ Tech Stack
 
@@ -40,6 +48,23 @@ A sophisticated full-stack e-commerce platform for technology and electronics re
 - **Stripe** - Payment gateway
 - **Bcrypt** - Password hashing
 - **Helmet** - Security middleware
+
+## ⚡ Quick Start
+
+### For Testing (Servers Already Running)
+If the development servers are already running:
+
+1. **Customer Access**: Visit `http://localhost:5173`
+   - Browse products, add to cart, test checkout
+   - Register new account or login with existing account
+
+2. **Admin Access**: 
+   - Go to `http://localhost:5173/login`
+   - Login with: `admin@techhub.com` / `admin123`
+   - Access admin dashboard from user menu dropdown
+
+### Sample Products
+The application comes pre-loaded with 8 sample tech products including iPhones, MacBooks, headphones, and cameras.
 
 ## 📁 Project Structure
 
